@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My App</title>
+</head>
+<body>
+<h1>Users</h1>
+<ul>
+    <% users.forEach(user => { %>
+        <li><%= user.first_name %> - <%= user.last_name %></li>
+    <% }) %>
+</ul>
+<form action="/api/users" method="POST">
+    <label>
+        <input type="text" name="first_name" placeholder="user name" required>
+    </label>
+    <label>
+        <input type="text" name="last_name" placeholder="user last name" required>
+    </label>
+    <button type="submit">Add user</button>
+</form>
+</body>
+</html>
